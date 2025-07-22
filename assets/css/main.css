@@ -151,6 +151,57 @@ body{font-family:var(--bs-font-sans-serif);line-height:1.6;}
     transform:rotate(3deg);
   }
 }
+/* === Hero shapes === */
+.hero .shape{
+  position:absolute;
+  pointer-events:none;      /* ไม่ให้คลิกติด */
+  animation: float 10s linear infinite;
+}
+
+/* ตำแหน่งแต่ละชิ้น */
+.shape-1{
+  width:120px;
+  top:10%;
+  left:55%;
+  animation-delay:-2s;
+}
+.shape-2{
+  width:180px;
+  bottom:8%;
+  right:60%;
+  animation-delay:-5s;
+}
+/* === Hero shapes === */
+.shape-3{
+  width:140px;
+  top:18%;
+  right:15%;
+  animation-delay:-3s;
+}
+.shape-4{
+  width:90px;
+  bottom:12%;
+  left:12%;
+  animation-delay:-4s;
+}
+
+/* (คีย์เฟรม float มีอยู่แล้ว ไม่ต้องซ้ำ) */
+
+/* keyframes ลอยช้า ๆ */
+@keyframes float{
+  0%{transform:translateY(0) rotate(0deg);}
+  50%{transform:translateY(-25px) rotate(5deg);}
+  100%{transform:translateY(0) rotate(0deg);}
+}
+
+/* Hover รูป hero */
+@media (min-width:992px){
+  .hero-img:hover{
+    transform:rotate(0deg) scale(1.04);
+    transition:.4s ease;
+  }
+}
+
 
 
 
