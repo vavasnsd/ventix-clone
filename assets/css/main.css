@@ -109,5 +109,17 @@ body{font-family:var(--bs-font-sans-serif);line-height:1.6;}
   content:"✘";
   color:#dc3545;
 }
+/* === Testimonials === */
+#testimonials .card {
+  transition: .25s;
+}
+#testimonials .card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0,0,0,.12);
+}
+#testimonials .swiper-pagination-bullet-active {
+  background: var(--primary);
+}
+
 
 

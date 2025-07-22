@@ -28,3 +28,13 @@ const io = new IntersectionObserver(
   { threshold: 0.6 }
 );
 counters.forEach((c) => io.observe(c));
+/* === Testimonials Swiper === */
+const swiper = new Swiper('.mySwiper', {
+  loop: true,
+  autoplay: { delay: 4500, disableOnInteraction: false },
+  speed: 600,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+});
