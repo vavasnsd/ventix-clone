@@ -120,6 +120,37 @@ body{font-family:var(--bs-font-sans-serif);line-height:1.6;}
 #testimonials .swiper-pagination-bullet-active {
   background: var(--primary);
 }
+/* === Hero upgrade === */
+.hero{
+  position:relative;
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  overflow:hidden;
+  background:linear-gradient(135deg,#ffc6ec 0%,#b8e7ff 100%);
+}
+
+/* วงรีไฮไลท์เบลอ */
+.hero::before{
+  content:'';
+  position:absolute;
+  width:800px;height:800px;
+  top:0;left:0;
+  transform:translate(-40%,-40%);
+  background:radial-gradient(circle at 70% 30%,
+             rgba(255,255,255,.9) 0%,rgba(255,255,255,0) 70%);
+  filter:blur(120px);
+  z-index:0;
+}
+
+.hero .container{position:relative;z-index:1;}
+
+@media (min-width:992px){
+  .hero-img{
+    max-width:460px;
+    transform:rotate(3deg);
+  }
+}
 
 
 
