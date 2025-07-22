@@ -1,0 +1,113 @@
+/* Variables */
+:root{
+  --primary:#ec4faa;
+  --primary-dark:#d43f97;
+  --primary-light:#fde6f5;
+  --bs-font-sans-serif:'Poppins',system-ui,sans-serif;
+}
+
+/* Base */
+body{font-family:var(--bs-font-sans-serif);line-height:1.6;}
+.text-gradient{
+  background:linear-gradient(90deg,var(--primary),#ff8fb2);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+
+/* Hero */
+.hero{min-height:90vh;background:var(--primary-light);}
+
+/* Buttons */
+.btn-primary{
+  --bs-btn-bg:var(--primary);
+  --bs-btn-border-color:var(--primary);
+  --bs-btn-hover-bg:var(--primary-dark);
+  --bs-btn-hover-border-color:var(--primary-dark);
+}
+/* Hover ยกการ์ด */
+.feature-card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0,0,0,.1);
+  transition: .25s;
+}
+/* === About & Stats === */
+#about{
+  --bs-bg-opacity:1;
+  background-color:#fff;
+}
+#about .badge{
+  background:var(--primary-light);
+}
+#about h2 .text-gradient{
+  background:linear-gradient(90deg,var(--primary),#ff8fb2);
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+}
+#about .counter{
+  color:var(--primary);
+  font-size:2.25rem;           /* ตัวเลขใหญ่ */
+}
+@media (min-width:992px){      /* จอใหญ่ให้รูปสูงเท่ากัน */
+  #about img{
+    max-height:480px;
+    object-fit:cover;
+  }
+}
+/* === Pricing === */
+.pricing-card{
+  transition:.25s;
+}
+.pricing-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 12px 24px rgba(0,0,0,.12);
+}
+
+/* การ์ด “ยอดนิยม” (มี border-primary) */
+.pricing-card.border-primary{
+  border:2px solid var(--primary);
+}
+
+.pricing-card .badge{
+  font-size:.675rem;
+  letter-spacing:.5px;
+  padding:.35rem .6rem;
+  border-radius:50rem;
+}
+
+/* ปุ่มในการ์ด */
+.pricing-card .btn-primary{
+  --bs-btn-bg:var(--primary);
+  --bs-btn-hover-bg:var(--primary-dark);
+}
+.pricing-card .btn-outline-primary{
+  --bs-btn-border-color:var(--primary);
+  color:var(--primary);
+}
+.pricing-card .btn-outline-primary:hover{
+  background:var(--primary);
+  color:#fff;
+}
+
+/* เช็กลิสต์สัญลักษณ์ */
+.pricing-card ul li{
+  margin-bottom:.35rem;
+  font-size:.95rem;
+}
+.pricing-card ul li::marker{
+  content:"";
+}
+.pricing-card ul li::before{
+  content:"✔︎";
+  color:#16a34a;               /* เขียวเช็คถูก */
+  font-weight:600;
+  margin-right:.4rem;
+}
+.pricing-card ul li:nth-child(4):not(:has(span)){  /* รายการที่เป็น ❌ ใน Basic */
+  color:#dc3545;
+}
+.pricing-card ul li:nth-child(4):not(:has(span))::before{
+  content:"✘";
+  color:#dc3545;
+}
+
+
